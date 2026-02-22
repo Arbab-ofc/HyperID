@@ -77,6 +77,11 @@ const {
 const id = randomId({ prefix: 'CJS_' });
 ```
 
+## 🔤 Encodings
+- `hex`: lowercase hexadecimal with two characters per byte.
+- `base62`: `A-Z`, `a-z`, `0-9` for compact IDs.
+- `alphanumeric`: `0-9`, `A-Z`, `a-z` for sortable-friendly output.
+
 ## 📖 API Reference
 
 ### `randomId`
