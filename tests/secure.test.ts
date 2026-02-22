@@ -67,6 +67,14 @@ describe('nanoId', () => {
     const id = nanoId({ alphabet: 'abc' });
     assert.match(id, /^[abc]+$/);
   });
+
+  it('throws when length is invalid', () => {
+    assert.throws(() => nanoId({ length: 0 }), TypeError);
+  });
+
+  it('throws when alphabet is empty', () => {
+    assert.throws(() => nanoId({ alphabet: '' }), TypeError);
+  });
 });
 
 describe('generateJWTSecret', () => {
