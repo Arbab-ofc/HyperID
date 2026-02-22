@@ -1,20 +1,24 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:22c55e&height=200&section=header&text=hyperid&fontSize=64&fontColor=ffffff&animation=fadeIn" alt="hyperid banner" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0b1220,100:0f172a&height=220&section=header&text=hyperid&fontSize=64&fontColor=ffffff&animation=fadeIn" alt="hyperid banner" />
 
 > Zero-dependency, TypeScript-first, cryptographically secure ID generation toolkit for Node.js
 
 <p>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2F80ED&center=true&vCenter=true&width=520&lines=Secure+IDs+for+Node.js+18%2B;Zero+Dependencies;ESM+%2B+CJS+Ready;TypeScript-First+%2B+Strict" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=94A3B8&center=true&vCenter=true&width=520&lines=Secure+IDs+for+Node.js+18%2B;Zero+Dependencies;ESM+%2B+CJS+Ready;TypeScript-First+%2B+Strict" alt="Typing SVG" />
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Node.js-%3E%3D18-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-  <img src="https://img.shields.io/badge/ESM%20%2B%20CJS-Dual%20Build-111827?style=for-the-badge" alt="ESM+CJS">
-  <img src="https://img.shields.io/badge/Zero%20Deps-Runtime-10B981?style=for-the-badge" alt="Zero Deps">
-  <img src="https://img.shields.io/badge/tsup-Build-0EA5E9?style=for-the-badge" alt="tsup">
-  <img src="https://img.shields.io/badge/tsx-Tests-7C3AED?style=for-the-badge" alt="tsx">
+  <img src="https://svg-banners.vercel.app/api?type=glass&text1=HyperID&text2=Glassmorphism%20Edition&width=800&height=140" alt="glass banner" />
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Node.js-%3E%3D18-0f172a?style=for-the-badge&logo=node.js&logoColor=3ddc84" alt="Node.js">
+  <img src="https://img.shields.io/badge/TypeScript-5.x-0f172a?style=for-the-badge&logo=typescript&logoColor=38bdf8" alt="TypeScript">
+  <img src="https://img.shields.io/badge/ESM%20%2B%20CJS-0f172a?style=for-the-badge&logo=javascript&logoColor=facc15" alt="ESM+CJS">
+  <img src="https://img.shields.io/badge/Zero%20Deps-0f172a?style=for-the-badge&logo=dependabot&logoColor=22c55e" alt="Zero Deps">
+  <img src="https://img.shields.io/badge/tsup-0f172a?style=for-the-badge&logo=esbuild&logoColor=38bdf8" alt="tsup">
+  <img src="https://img.shields.io/badge/tsx-0f172a?style=for-the-badge&logo=vitest&logoColor=a855f7" alt="tsx">
 </p>
 
 <p>
@@ -30,14 +34,18 @@
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Status-Production%20Ready-16a34a?style=for-the-badge" alt="Production Ready">
-  <img src="https://img.shields.io/badge/Runtime-Node.js%2018%2B-0f172a?style=for-the-badge" alt="Runtime">
-  <img src="https://img.shields.io/badge/Bundle-ESM%20%2B%20CJS-1f2937?style=for-the-badge" alt="Bundle">
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-0f172a?style=for-the-badge&logo=vercel&logoColor=22c55e" alt="Production Ready">
+  <img src="https://img.shields.io/badge/Runtime-Node.js%2018%2B-0f172a?style=for-the-badge&logo=node.js&logoColor=3ddc84" alt="Runtime">
+  <img src="https://img.shields.io/badge/Bundle-ESM%20%2B%20CJS-0f172a?style=for-the-badge&logo=rollup.js&logoColor=f97316" alt="Bundle">
 </p>
 
 </div>
 
 <br />
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e293b,100:0f172a&height=3&section=footer" alt="divider" />
+</div>
 
 ## ✨ Features
 - `randomId` for flexible crypto-safe IDs
@@ -55,7 +63,7 @@
 - ESM + CJS builds
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0ea5e9,100:22c55e&height=3&section=footer" alt="divider" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e293b,100:0f172a&height=3&section=footer" alt="divider" />
 </div>
 
 ## 📦 Installation
@@ -67,7 +75,7 @@ npm install hyperid
 - Node.js 18 or newer.
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0ea5e9,100:22c55e&height=3&section=footer" alt="divider" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e293b,100:0f172a&height=3&section=footer" alt="divider" />
 </div>
 
 ## 🧭 Full Usage Guide
@@ -146,7 +154,7 @@ const id = randomId({ prefix: 'CJS_' });
 ```
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0ea5e9,100:22c55e&height=3&section=footer" alt="divider" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e293b,100:0f172a&height=3&section=footer" alt="divider" />
 </div>
 
 ## 🔤 Encodings
@@ -347,7 +355,7 @@ DTS dist/index.d.ts    4.04 KB
 - `withPrefix('abc', 'PRE_')` -> `PRE_abc`.
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22c55e,100:0ea5e9&height=120&section=footer" alt="footer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:1e293b&height=120&section=footer" alt="footer" />
 </div>
 
 ## 🤝 Contributing
