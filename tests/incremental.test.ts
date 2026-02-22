@@ -56,4 +56,9 @@ describe('incrementalId', () => {
     assert.equal(incrementalId({ prefix: 'X_' }), 'X_2');
     assert.equal(incrementalId({ prefix: 'Y_' }), 'Y_2');
   });
+
+  it('uses start value on first call per prefix', () => {
+    assert.equal(incrementalId({ prefix: 'START_', start: 10 }), 'START_10');
+    assert.equal(incrementalId({ prefix: 'START_' }), 'START_11');
+  });
 });
