@@ -193,3 +193,8 @@ Example:
 ```ts
 const tagged = withPrefix('abc123', 'PRE_');
 ```
+
+## 🔒 Security
+- All randomness is generated using `crypto.randomBytes` or `crypto.randomUUID`.
+- No `Math.random` usage anywhere in the library.
+- Suitable for security-sensitive identifiers such as tokens, secrets, and session IDs.
