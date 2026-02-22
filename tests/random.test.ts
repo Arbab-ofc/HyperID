@@ -31,6 +31,11 @@ describe('randomId', () => {
     assert.match(id, /^[0-9A-Za-z]+$/);
   });
 
+  it('supports single-character lengths', () => {
+    const id = randomId({ length: 1, encoding: 'base62' });
+    assert.equal(id.length, 1);
+  });
+
   it('throws when length is invalid', () => {
     assert.throws(() => randomId({ length: 0 }), TypeError);
   });
@@ -53,5 +58,11 @@ describe('shortId', () => {
   it('returns base62 output', () => {
     const id = shortId();
     assert.match(id, /^[A-Za-z0-9]+$/);
+  });
+
+  it('supports prefixes', () => {
+    const id = shortId({ prefix: 'S_' });
+    assert.ok(id.startsWith('S_'));
+    assert.equal(id.length, 10);
   });
 });
