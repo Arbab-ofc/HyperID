@@ -23,3 +23,15 @@ export function randomId(options: RandomIdOptions = {}): string {
 
   return prefix + encoded;
 }
+
+export interface ShortIdOptions {
+  prefix?: string;
+}
+
+export function shortId(options: ShortIdOptions = {}): string {
+  return randomId({
+    length: 8,
+    encoding: 'base62',
+    prefix: options.prefix ?? '',
+  });
+}
