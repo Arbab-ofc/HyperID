@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0b1220,100:0f172a&height=220&section=header&text=hyperid&fontSize=64&fontColor=ffffff&animation=fadeIn" alt="hyperid banner" />
 
-> Zero-dependency, TypeScript-first, cryptographically secure ID generation toolkit for Node.js
+> Zero-dependency, TypeScript-first, cryptographically secure ID generation toolkit for Node.js (v1)
 
 <p>
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=94A3B8&center=true&vCenter=true&width=520&lines=Secure+IDs+for+Node.js+18%2B;Zero+Dependencies;ESM+%2B+CJS+Ready;TypeScript-First+%2B+Strict" alt="Typing SVG" />
