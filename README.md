@@ -9,10 +9,6 @@
 </p>
 
 <p>
-  <img src="https://svg-banners.vercel.app/api?type=glass&text1=HyperID&text2=Glassmorphism%20Edition&width=800&height=140" alt="glass banner" />
-</p>
-
-<p>
   <img src="https://img.shields.io/badge/Node.js-%3E%3D18-0f172a?style=for-the-badge&logo=node.js&logoColor=3ddc84" alt="Node.js">
   <img src="https://img.shields.io/badge/TypeScript-5.x-0f172a?style=for-the-badge&logo=typescript&logoColor=38bdf8" alt="TypeScript">
   <img src="https://img.shields.io/badge/ESM%20%2B%20CJS-0f172a?style=for-the-badge&logo=javascript&logoColor=facc15" alt="ESM+CJS">
