@@ -15,3 +15,21 @@ export function createIncrementalIdGenerator(
     return value;
   };
 }
+
+const generators = new Map<string, () => string>();
+
+export function incrementalId(options: IncrementalIdOptions = {}): string {
+  const prefix = options.prefix ?? '';
+  const existing = generators.get(prefix);
+
+  if (existing) {
+    return existing();
+  }
+
+  const created = createIncrementalIdGenerator({
+    prefix,
+    start: options.start ?? 1,
+  });
+  generators.set(prefix, created);
+  return created();
+}
