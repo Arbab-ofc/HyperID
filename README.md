@@ -139,3 +139,30 @@ Example:
 const first = incrementalId({ prefix: 'ORD_' });
 const second = incrementalId({ prefix: 'ORD_' });
 ```
+
+### `uuidV4`
+Signature: `uuidV4(): string`
+
+Parameters: none
+
+Returns: `string`
+
+Example:
+```ts
+const id = uuidV4();
+```
+
+### `nanoId`
+Signature: `nanoId(options?: NanoIdOptions): string`
+
+Parameters:
+- `options`: `NanoIdOptions` (optional).
+- `options.length`: `number` (default: `21`). Output length.
+- `options.alphabet`: `string` (default: base62 alphabet). Character set.
+
+Returns: `string`
+
+Example:
+```ts
+const id = nanoId({ length: 12 });
+```
