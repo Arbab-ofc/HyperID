@@ -17,3 +17,18 @@ export function encodeBytes(bytes: Buffer, encoding: Encoding): string {
 
   return output.join('');
 }
+
+export function encodeBytesToLength(bytes: Buffer, encoding: Encoding, length: number): string {
+  const encoded = encodeBytes(bytes, encoding);
+
+  if (encoded.length === length) {
+    return encoded;
+  }
+
+  if (encoded.length > length) {
+    return encoded.slice(0, length);
+  }
+
+  const padChar = encoding === 'hex' ? '0' : (encoding === 'base62' ? BASE62_CHARSET[0] : ALPHANUMERIC_CHARSET[0]);
+  return encoded.padEnd(length, padChar);
+}
