@@ -22,6 +22,9 @@
 npm install hyperid
 ```
 
+## 🧰 Requirements
+- Node.js 18 or newer.
+
 ## 🔧 Usage
 ```ts
 import {
