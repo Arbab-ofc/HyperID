@@ -60,6 +60,23 @@ const shortSecret = generateJWTSecret(32);
 const tagged = withPrefix('abc123', 'PRE_');
 ```
 
+CommonJS example:
+```js
+const {
+  randomId,
+  shortId,
+  secureId,
+  incrementalId,
+  createIncrementalIdGenerator,
+  uuidV4,
+  nanoId,
+  generateJWTSecret,
+  withPrefix,
+} = require('hyperid');
+
+const id = randomId({ prefix: 'CJS_' });
+```
+
 ## 📖 API Reference
 
 ### `randomId`
