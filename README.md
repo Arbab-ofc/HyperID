@@ -87,6 +87,8 @@ const id = randomId({ prefix: 'CJS_' });
 
 ## 📖 API Reference
 
+Encoding type: `Encoding = 'hex' | 'alphanumeric' | 'base62'`.
+
 ### `randomId`
 Signature: `randomId(options?: RandomIdOptions): string`
 
