@@ -59,3 +59,35 @@ const shortSecret = generateJWTSecret(32);
 
 const tagged = withPrefix('abc123', 'PRE_');
 ```
+
+## 📖 API Reference
+
+### `randomId`
+Signature: `randomId(options?: RandomIdOptions): string`
+
+Parameters:
+- `options`: `RandomIdOptions` (optional).
+- `options.length`: `number` (default: `16`). Output length in characters.
+- `options.encoding`: `Encoding` (default: `'base62'`). Output encoding.
+- `options.prefix`: `string` (default: `''`). Prefix to prepend.
+
+Returns: `string`
+
+Example:
+```ts
+const id = randomId({ length: 24, encoding: 'alphanumeric', prefix: 'ID_' });
+```
+
+### `shortId`
+Signature: `shortId(options?: { prefix?: string }): string`
+
+Parameters:
+- `options`: `{ prefix?: string }` (optional).
+- `options.prefix`: `string` (default: `''`). Prefix to prepend.
+
+Returns: `string`
+
+Example:
+```ts
+const id = shortId({ prefix: 'S_' });
+```
