@@ -1,5 +1,5 @@
 {
-  "name": "@arbab-ofc/hyperid",
+  "name": "@arbabofc/hyperid",
   "version": "1.0.0",
   "description": "Zero-dependency, TypeScript-first, cryptographically secure ID generation toolkit",
   "type": "module",
