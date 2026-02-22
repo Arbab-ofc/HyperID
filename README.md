@@ -350,12 +350,12 @@ DTS dist/index.d.ts    4.04 KB
 - `generateJWTSecret()` -> base64url-encoded secret string.
 - `withPrefix('abc', 'PRE_')` -> `PRE_abc`.
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:1e293b&height=120&section=footer" alt="footer" />
-</div>
-
 ## 🤝 Contributing
 1. Fork the repository.
 2. Create a feature branch.
 3. Commit your changes.
 4. Open a pull request.
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:1e293b&height=120&section=footer" alt="footer" />
+</div>
