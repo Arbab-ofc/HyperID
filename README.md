@@ -202,3 +202,12 @@ const tagged = withPrefix('abc123', 'PRE_');
 ## ⚡ Performance
 - Synchronous APIs for predictable performance and simplicity.
 - Benchmarks are coming soon.
+
+## 🤝 Contributing
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Open a pull request.
+
+## 📄 License
+MIT
