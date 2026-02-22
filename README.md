@@ -44,3 +44,18 @@ const compact = shortId();
 
 const secure = secureId();
 const secureBase62 = secureId({ encoding: 'base62', length: 48, prefix: 'SEC_' });
+
+const orderId = incrementalId({ prefix: 'ORD_' });
+const userIdGenerator = createIncrementalIdGenerator({ prefix: 'USR_', start: 1000 });
+const userId = userIdGenerator();
+
+const uuid = uuidV4();
+
+const nano = nanoId();
+const nanoCustom = nanoId({ length: 10, alphabet: 'abcXYZ' });
+
+const jwtSecret = generateJWTSecret();
+const shortSecret = generateJWTSecret(32);
+
+const tagged = withPrefix('abc123', 'PRE_');
+```
