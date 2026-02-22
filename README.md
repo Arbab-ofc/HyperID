@@ -64,7 +64,7 @@
 
 ## 📦 Installation
 ```bash
-npm install hyperid
+npm install @arbabofc/hyperid
 ```
 
 ## 🧰 Requirements
@@ -106,7 +106,7 @@ import {
   nanoId,
   generateJWTSecret,
   withPrefix,
-} from 'hyperid';
+} from '@arbabofc/hyperid';
 
 const id = randomId();
 const hexId = randomId({ length: 32, encoding: 'hex' });
@@ -144,7 +144,7 @@ const {
   nanoId,
   generateJWTSecret,
   withPrefix,
-} = require('hyperid');
+} = require('@arbabofc/hyperid');
 
 const id = randomId({ prefix: 'CJS_' });
 ```
