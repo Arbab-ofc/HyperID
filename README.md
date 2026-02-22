@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 hyperid
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:22c55e&height=200&section=header&text=hyperid&fontSize=64&fontColor=ffffff&animation=fadeIn" alt="hyperid banner" />
 
 > Zero-dependency, TypeScript-first, cryptographically secure ID generation toolkit for Node.js
 
@@ -29,7 +29,15 @@
   </a>
 </p>
 
+<p>
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-16a34a?style=for-the-badge" alt="Production Ready">
+  <img src="https://img.shields.io/badge/Runtime-Node.js%2018%2B-0f172a?style=for-the-badge" alt="Runtime">
+  <img src="https://img.shields.io/badge/Bundle-ESM%20%2B%20CJS-1f2937?style=for-the-badge" alt="Bundle">
+</p>
+
 </div>
+
+<br />
 
 ## ✨ Features
 - `randomId` for flexible crypto-safe IDs
@@ -46,6 +54,10 @@
 - TypeScript-first with strict types
 - ESM + CJS builds
 
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0ea5e9,100:22c55e&height=3&section=footer" alt="divider" />
+</div>
+
 ## 📦 Installation
 ```bash
 npm install hyperid
@@ -54,23 +66,29 @@ npm install hyperid
 ## 🧰 Requirements
 - Node.js 18 or newer.
 
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0ea5e9,100:22c55e&height=3&section=footer" alt="divider" />
+</div>
+
 ## 🧭 Full Usage Guide
 This section explains how to use every feature, what you get, and when to use it.
 
 1. Install the package and import the functions you need.
-2. Choose the generator based on your use-case:
-   - `randomId` for general IDs (configurable length and encoding).
-   - `shortId` for compact base62 IDs.
-   - `secureId` for high-entropy identifiers and secrets.
-   - `incrementalId` for in-memory counters in a single process.
-   - `createIncrementalIdGenerator` for isolated sequences (multiple counters).
-   - `uuidV4` for standard UUIDs.
-   - `nanoId` for NanoID-style IDs with a custom alphabet.
-   - `generateJWTSecret` for HMAC JWT secrets (base64url).
-   - `withPrefix` to standardize prefixes across IDs.
+2. Choose the generator based on your use-case.
 3. Use prefixes to namespace IDs across environments or domains (e.g., `ORD_`, `USR_`).
 4. Prefer `secureId` and `generateJWTSecret` for security-sensitive values (tokens, secrets).
 5. `incrementalId` is in-memory; it resets when the process restarts.
+
+Quick selection guide:
+- `randomId`: general IDs with flexible length/encoding.
+- `shortId`: compact base62 IDs.
+- `secureId`: high-entropy identifiers and secrets.
+- `incrementalId`: in-memory counters in a single process.
+- `createIncrementalIdGenerator`: isolated sequences (multiple counters).
+- `uuidV4`: standard UUIDs.
+- `nanoId`: NanoID-style IDs with a custom alphabet.
+- `generateJWTSecret`: HMAC JWT secrets (base64url).
+- `withPrefix`: consistent prefixes across your IDs.
 
 ## 🔧 Usage
 ```ts
@@ -126,6 +144,10 @@ const {
 
 const id = randomId({ prefix: 'CJS_' });
 ```
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0ea5e9,100:22c55e&height=3&section=footer" alt="divider" />
+</div>
 
 ## 🔤 Encodings
 - `hex`: lowercase hexadecimal with two characters per byte.
@@ -268,6 +290,10 @@ Example:
 const tagged = withPrefix('abc123', 'PRE_');
 ```
 
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0ea5e9,100:22c55e&height=3&section=footer" alt="divider" />
+</div>
+
 ## 🔒 Security
 - All randomness is generated using `crypto.randomBytes` or `crypto.randomUUID`.
 - No `Math.random` usage anywhere in the library.
@@ -319,6 +345,10 @@ DTS dist/index.d.ts    4.04 KB
 - `nanoId()` -> 21-char base62-style string (custom alphabet supported).
 - `generateJWTSecret()` -> base64url-encoded secret string.
 - `withPrefix('abc', 'PRE_')` -> `PRE_abc`.
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22c55e,100:0ea5e9&height=120&section=footer" alt="footer" />
+</div>
 
 ## 🤝 Contributing
 1. Fork the repository.
