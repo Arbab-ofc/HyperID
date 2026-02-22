@@ -28,6 +28,10 @@ describe('secureId', () => {
     const id = secureId({ prefix: 'SEC_' });
     assert.ok(id.startsWith('SEC_'));
   });
+
+  it('throws when length is invalid', () => {
+    assert.throws(() => secureId({ length: 0 }), TypeError);
+  });
 });
 
 describe('uuidV4', () => {
@@ -76,6 +80,10 @@ describe('generateJWTSecret', () => {
     const longSecret = generateJWTSecret(64);
     const shortSecret = generateJWTSecret(32);
     assert.ok(shortSecret.length < longSecret.length);
+  });
+
+  it('throws when length is invalid', () => {
+    assert.throws(() => generateJWTSecret(0), TypeError);
   });
 });
 
