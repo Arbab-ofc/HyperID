@@ -166,3 +166,30 @@ Example:
 ```ts
 const id = nanoId({ length: 12 });
 ```
+
+### `generateJWTSecret`
+Signature: `generateJWTSecret(length?: number): string`
+
+Parameters:
+- `length`: `number` (default: `64`). Number of random bytes.
+
+Returns: `string`
+
+Example:
+```ts
+const secret = generateJWTSecret(48);
+```
+
+### `withPrefix`
+Signature: `withPrefix(id: string, prefix: string): string`
+
+Parameters:
+- `id`: `string`. Base identifier.
+- `prefix`: `string`. Prefix to prepend.
+
+Returns: `string`
+
+Example:
+```ts
+const tagged = withPrefix('abc123', 'PRE_');
+```
