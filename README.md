@@ -91,3 +91,19 @@ Example:
 ```ts
 const id = shortId({ prefix: 'S_' });
 ```
+
+### `secureId`
+Signature: `secureId(options?: SecureIdOptions): string`
+
+Parameters:
+- `options`: `SecureIdOptions` (optional).
+- `options.length`: `number` (default: `32`). Output length in characters.
+- `options.encoding`: `Encoding` (default: `'hex'`). Output encoding.
+- `options.prefix`: `string` (default: `''`). Prefix to prepend.
+
+Returns: `string`
+
+Example:
+```ts
+const token = secureId({ length: 64, encoding: 'hex' });
+```
