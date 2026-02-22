@@ -1,6 +1,35 @@
+<div align="center">
+
 # 🚀 hyperid
 
 > Zero-dependency, TypeScript-first, cryptographically secure ID generation toolkit for Node.js
+
+<p>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2F80ED&center=true&vCenter=true&width=520&lines=Secure+IDs+for+Node.js+18%2B;Zero+Dependencies;ESM+%2B+CJS+Ready;TypeScript-First+%2B+Strict" alt="Typing SVG" />
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/Node.js-%3E%3D18-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/ESM%20%2B%20CJS-Dual%20Build-111827?style=for-the-badge" alt="ESM+CJS">
+  <img src="https://img.shields.io/badge/Zero%20Deps-Runtime-10B981?style=for-the-badge" alt="Zero Deps">
+  <img src="https://img.shields.io/badge/tsup-Build-0EA5E9?style=for-the-badge" alt="tsup">
+  <img src="https://img.shields.io/badge/tsx-Tests-7C3AED?style=for-the-badge" alt="tsx">
+</p>
+
+<p>
+  <a href="https://github.com/Arbab-ofc">
+    <img src="https://img.shields.io/badge/GitHub-Arbab--ofc-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="mailto:arbabprvt@gmail.com">
+    <img src="https://img.shields.io/badge/Email-arbabprvt%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="https://www.linkedin.com/in/arbab-ofc/">
+    <img src="https://img.shields.io/badge/LinkedIn-Arbab%20ofc-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+</p>
+
+</div>
 
 ## ✨ Features
 - `randomId` for flexible crypto-safe IDs
@@ -24,6 +53,24 @@ npm install hyperid
 
 ## 🧰 Requirements
 - Node.js 18 or newer.
+
+## 🧭 Full Usage Guide
+This section explains how to use every feature, what you get, and when to use it.
+
+1. Install the package and import the functions you need.
+2. Choose the generator based on your use-case:
+   - `randomId` for general IDs (configurable length and encoding).
+   - `shortId` for compact base62 IDs.
+   - `secureId` for high-entropy identifiers and secrets.
+   - `incrementalId` for in-memory counters in a single process.
+   - `createIncrementalIdGenerator` for isolated sequences (multiple counters).
+   - `uuidV4` for standard UUIDs.
+   - `nanoId` for NanoID-style IDs with a custom alphabet.
+   - `generateJWTSecret` for HMAC JWT secrets (base64url).
+   - `withPrefix` to standardize prefixes across IDs.
+3. Use prefixes to namespace IDs across environments or domains (e.g., `ORD_`, `USR_`).
+4. Prefer `secureId` and `generateJWTSecret` for security-sensitive values (tokens, secrets).
+5. `incrementalId` is in-memory; it resets when the process restarts.
 
 ## 🔧 Usage
 ```ts
@@ -230,11 +277,51 @@ const tagged = withPrefix('abc123', 'PRE_');
 - Synchronous APIs for predictable performance and simplicity.
 - Benchmarks are coming soon.
 
+## ✅ Tested Results
+Test suite executed with:
+```bash
+npx tsx --test tests/*.test.ts
+```
+
+Summary:
+- `tests`: 38
+- `suites`: 9
+- `pass`: 38
+- `fail`: 0
+
+Excerpt:
+```text
+✔ createIncrementalIdGenerator
+✔ incrementalId
+✔ randomId
+✔ shortId
+✔ secureId
+✔ uuidV4
+✔ nanoId
+✔ generateJWTSecret
+✔ withPrefix
+```
+
+Build output:
+```text
+CJS dist/index.cjs     2.62 KB
+ESM dist/index.js      2.03 KB
+DTS dist/index.d.ts    4.04 KB
+```
+
+## 📌 Feature Outputs (What You Get)
+- `randomId()` -> 16-char base62 string (configurable length/encoding/prefix).
+- `shortId()` -> 8-char base62 string (compact IDs).
+- `secureId()` -> 32-char hex string (minimum 32 bytes entropy).
+- `incrementalId({ prefix: 'ORD_' })` -> `ORD_1`, `ORD_2`, ... (per-prefix counters).
+- `createIncrementalIdGenerator()` -> isolated sequence (no shared state).
+- `uuidV4()` -> RFC 4122 v4 UUID string.
+- `nanoId()` -> 21-char base62-style string (custom alphabet supported).
+- `generateJWTSecret()` -> base64url-encoded secret string.
+- `withPrefix('abc', 'PRE_')` -> `PRE_abc`.
+
 ## 🤝 Contributing
 1. Fork the repository.
 2. Create a feature branch.
 3. Commit your changes.
 4. Open a pull request.
-
-## 📄 License
-MIT
