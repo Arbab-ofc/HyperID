@@ -107,3 +107,35 @@ Example:
 ```ts
 const token = secureId({ length: 64, encoding: 'hex' });
 ```
+
+### `createIncrementalIdGenerator`
+Signature: `createIncrementalIdGenerator(options?: IncrementalIdOptions): () => string`
+
+Parameters:
+- `options`: `IncrementalIdOptions` (optional).
+- `options.prefix`: `string` (default: `''`). Prefix to prepend.
+- `options.start`: `number` (default: `1`). Starting counter value.
+
+Returns: `() => string`
+
+Example:
+```ts
+const generator = createIncrementalIdGenerator({ prefix: 'USR_', start: 500 });
+const id = generator();
+```
+
+### `incrementalId`
+Signature: `incrementalId(options?: IncrementalIdOptions): string`
+
+Parameters:
+- `options`: `IncrementalIdOptions` (optional).
+- `options.prefix`: `string` (default: `''`). Prefix to prepend.
+- `options.start`: `number` (default: `1`). Initial counter when a prefix is first seen.
+
+Returns: `string`
+
+Example:
+```ts
+const first = incrementalId({ prefix: 'ORD_' });
+const second = incrementalId({ prefix: 'ORD_' });
+```
