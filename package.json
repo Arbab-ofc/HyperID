@@ -1,6 +1,6 @@
 {
-  "name": "hyperid",
-  "version": "1.0.1",
+  "name": "@arbab-ofc/hyperid",
+  "version": "1.0.0",
   "description": "Zero-dependency, TypeScript-first, cryptographically secure ID generation toolkit",
   "type": "module",
   "main": "./dist/index.cjs",
