@@ -21,3 +21,26 @@
 ```bash
 npm install hyperid
 ```
+
+## 🔧 Usage
+```ts
+import {
+  randomId,
+  shortId,
+  secureId,
+  incrementalId,
+  createIncrementalIdGenerator,
+  uuidV4,
+  nanoId,
+  generateJWTSecret,
+  withPrefix,
+} from 'hyperid';
+
+const id = randomId();
+const hexId = randomId({ length: 32, encoding: 'hex' });
+const prefixed = randomId({ prefix: 'ID_' });
+
+const compact = shortId();
+
+const secure = secureId();
+const secureBase62 = secureId({ encoding: 'base62', length: 48, prefix: 'SEC_' });
