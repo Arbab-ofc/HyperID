@@ -19,6 +19,12 @@ describe('randomId', () => {
     assert.match(id, /^[0-9a-f]+$/);
   });
 
+  it('supports odd hex lengths', () => {
+    const id = randomId({ encoding: 'hex', length: 15 });
+    assert.equal(id.length, 15);
+    assert.match(id, /^[0-9a-f]+$/);
+  });
+
   it('supports prefixes', () => {
     const id = randomId({ prefix: 'ID_' });
     assert.ok(id.startsWith('ID_'));
